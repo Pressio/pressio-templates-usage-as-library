@@ -46,8 +46,8 @@
 //@HEADER
 */
 
-#define PRESSIO_ENABLE_TPL_EIGEN 1
-#define PRESSIO_ENABLE_DEBUG_PRINT 1
+#define PRESSIO_ENABLE_TPL_EIGEN
+#define PRESSIO_ENABLE_DEBUG_PRINT
 
 #include <pressio/utils.hpp>
 
