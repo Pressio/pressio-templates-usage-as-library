@@ -49,14 +49,13 @@
 #define PRESSIO_ENABLE_TPL_EIGEN
 #define PRESSIO_ENABLE_DEBUG_PRINT
 
-#include <pressio/utils.hpp>
+#include <pressio-log/core.hpp>
 
 int main() {
-  pressio::log::initialize(pressio::logto::terminal, "log.txt");
-  pressio::log::setVerbosity({pressio::log::level::info});
+  PRESSIOLOG_INITIALIZE(pressiolog::LogLevel::info, pressiolog::LogTo::console, "log.txt");
 
   double a = 1.;
   PRESSIOLOG_INFO("pressio log message, {:3}", a);
 
-  pressio::log::finalize();
+  PRESSIOLOG_FINALIZE();
 }
